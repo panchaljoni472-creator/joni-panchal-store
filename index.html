@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joni Panchal Store - Featured Product</title>
+    <title>Joni Panchal Store - New Jeans Collection</title>
     <style>
         /* General Styles */
         body {
@@ -17,75 +18,81 @@
         .header {
             background-color: #333;
             color: white;
-            padding: 15px 20px;
+            padding: 20px;
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            margin: 0;
         }
         
-        /* Main Product Display */
-        .product-container {
-            max-width: 600px;
-            margin: 0 auto;
+        /* Main Product Grid (for multiple items) */
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap; /* मोबाइल पर नीचे आ जाएगा */
+            justify-content: center;
+            gap: 25px; /* उत्पादों के बीच की दूरी */
+            padding: 20px;
+        }
+
+        /* Individual Product Card */
+        .product-card {
             background-color: white;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-            padding: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 20px;
             border-radius: 10px;
+            width: 100%; /* मोबाइल पर पूरी चौड़ाई */
+            max-width: 350px; /* डेस्कटॉप पर अधिकतम चौड़ाई */
+            text-align: left;
         }
         
-        .product-image img {
-            /* फ़ाइल नाम: 1000049069.jpg */
+        .product-card img {
             max-width: 100%;
             height: auto;
-            max-height: 650px;
+            max-height: 450px; 
             display: block;
-            margin: 0 auto 25px;
-            border: 1px solid #ddd;
+            margin: 0 auto 15px;
             border-radius: 6px;
         }
 
-        /* Product Details Section */
-        .details-section {
-            padding: 10px;
-            text-align: left;
-        }
-        .details-section h3 {
-            margin: 0 0 15px 0;
-            font-size: 1.8em;
+        /* Product Details */
+        .product-card h3 {
+            font-size: 1.5em;
             color: #1a1a1a;
-            border-bottom: 2px solid #eee;
+            border-bottom: 1px solid #eee;
             padding-bottom: 10px;
+            margin-top: 0;
         }
         .details-list {
             list-style: none;
             padding: 0;
-            margin: 5px 0 25px 0;
-            font-size: 1.1em;
+            margin: 5px 0 15px 0;
+            font-size: 1.0em;
         }
         .details-list li {
-            margin-bottom: 10px;
+            margin-bottom: 5px;
         }
         .details-list li strong {
             font-weight: bold;
             color: #444;
             display: inline-block;
-            width: 120px; 
+            width: 90px; 
         }
         .price {
-            font-size: 2.2em;
-            color: #e67e22; /* Orange for price */
+            font-size: 1.8em;
+            color: #e67e22; 
             font-weight: bold;
-            margin-top: 20px;
-            margin-bottom: 30px;
+            margin: 15px 0;
         }
         .add-to-cart {
-            padding: 18px 25px;
-            background-color: #25D366; /* WhatsApp Green */
+            padding: 12px 20px;
+            background-color: #25D366; 
             color: white;
             border: none;
             cursor: pointer;
-            font-size: 1.2em;
+            font-size: 1.0em;
             font-weight: bold;
-            border-radius: 10px;
+            border-radius: 8px;
             display: block;
             width: 100%;
             text-align: center;
@@ -102,29 +109,41 @@
 
     <div class="header">
         <h1>Joni Panchal Store</h1>
-        <h2>Black Straight Fit Jeans</h2>
+        <p>Featured Jeans Collection</p>
     </div>
 
-    <div class="product-container">
-        
-        <div class="product-image">
-            <img src="1000049069.jpg" alt="Black Straight Fit Jeans Back Side">
-        </div>
+    <div class="product-grid">
 
-        <div class="details-section">
+        <div class="product-card">
+            <img src="1000049069.jpg" alt="Black Straight Fit Jeans Back Side">
+            
             <h3>Black Jeans - Size 30</h3>
             <ul class="details-list">
-                <li><strong>Product Name:</strong> Black Straight Fit Jeans</li>
+                <li><strong>Product:</strong> Black Jeans</li>
                 <li><strong>Fabric:</strong> Denim</li>
-                <li><strong>Waist Size:</strong> 30</li>
+                <li><strong>Waist:</strong> 30</li>
                 <li><strong>Condition:</strong> Excellent Used</li>
             </ul>
             <p class="price">Price: ₹200</p>
             <a href="https://wa.me/919588750916?text=I%20want%20to%20buy%20Black%20Straight%20Fit%20Jeans%20(Size%2030%2C%20%E2%82%B9200)." target="_blank" class="add-to-cart">ORDER ON WHATSAPP</a>
+        </div>
+
+
+        <div class="product-card">
+            <img src="1000049080.jpg" alt="New Black Jeans Size 28">
+            
+            <h3>New Black/Dark Jeans - Size 28</h3>
+            <ul class="details-list">
+                <li><strong>Product:</strong> Dark Jeans</li>
+                <li><strong>Fabric:</strong> Denim</li>
+                <li><strong>Waist:</strong> 28</li>
+                <li><strong>Condition:</strong> Excellent Used</li>
+            </ul>
+            <p class="price">Price: ₹200</p>
+            <a href="https://wa.me/919588750916?text=I%20want%20to%20buy%20New%20Dark%20Jeans%20(Size%2028%2C%20%E2%82%B9200)." target="_blank" class="add-to-cart">ORDER ON WHATSAPP</a>
         </div>
         
     </div>
     
 </body>
 </html>
-
