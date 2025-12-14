@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joni Panchal Jeans Store - Updated Products</title>
+    <title>Joni Panchal Jeans Store - Size 28 Jeans</title>
     <style>
         /* General Styles */
         body {
@@ -12,113 +12,80 @@
             padding: 0;
             background-color: #f4f4f4;
             color: #333;
+            text-align: center; 
         }
         .header {
             background-color: #333;
             color: white;
-            padding: 10px 20px;
+            padding: 15px 20px;
             text-align: center;
         }
         
-        /* Main Product View Layout (Flexbox) */
-        .product-page-container {
-            display: flex;
-            max-width: 900px;
-            margin: 20px auto;
+        /* Main Product Display */
+        .product-container {
+            max-width: 600px;
+            margin: 30px auto;
             background-color: white;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 20px;
         }
         
-        /* 1. Sidebar (Vertical Scroll) - WIDTH INCREASED TO 250PX */
-        .sidebar {
-            width: 250px; /* चौड़ाई 250px की गई */
-            padding: 10px;
-            border-right: 1px solid #ddd;
-            overflow-y: auto; 
-            max-height: 80vh; 
-        }
-        .small-product-preview {
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            cursor: pointer;
-            overflow: hidden;
-            background-color: #fff;
-            height: 150px; /* ऊँचाई 150px की गई */
-        }
-        .small-product-preview img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* 2. Main Product Display (Horizontal Scroll) */
-        .main-display {
-            flex-grow: 1;
-            padding: 20px 0; 
-            text-align: center;
-            overflow-x: auto; 
-            white-space: nowrap; 
-        }
-        
-        .main-product-slide {
-            display: inline-block;
-            width: 100%; 
-            max-width: 650px;
-            padding: 0 20px;
-            box-sizing: border-box;
-            white-space: normal; 
-            margin-right: 10px; 
-        }
-        
-        .main-product-slide img {
-            max-width: 90%;
+        .product-image img {
+            max-width: 100%;
             height: auto;
-            max-height: 450px;
+            max-height: 500px;
             display: block;
-            margin: 0 auto 15px;
+            margin: 0 auto 20px;
+            border: 1px solid #ddd;
         }
 
-        /* 3. Product Details Section */
+        /* Product Details Section */
         .details-section {
             padding: 15px;
-            border-top: 1px solid #eee;
             text-align: left;
-            width: 100%;
         }
         .details-section h3 {
-            margin: 0 0 10px 0;
-            font-size: 1.2em;
-            color: #555;
+            margin: 0 0 15px 0;
+            font-size: 1.5em;
+            color: #212121;
         }
         .details-list {
             list-style: none;
             padding: 0;
-            margin: 5px 0;
-            font-size: 1em;
+            margin: 5px 0 20px 0;
+            font-size: 1.1em;
         }
         .details-list li {
-            margin-bottom: 5px;
+            margin-bottom: 8px;
+            font-weight: normal;
+        }
+        .details-list li strong {
             font-weight: bold;
+            color: #555;
         }
         .price {
-            font-size: 1.4em;
+            font-size: 1.8em;
             color: #28a745;
             font-weight: bold;
-            margin-top: 10px;
+            margin-top: 15px;
+            margin-bottom: 25px;
+            border-top: 1px solid #eee;
+            padding-top: 10px;
         }
         .add-to-cart {
-            margin-top: 20px;
-            padding: 10px 20px;
+            padding: 15px 20px;
             background-color: #25D366; 
             color: white;
             border: none;
             cursor: pointer;
-            font-size: 1em;
-            border-radius: 5px;
+            font-size: 1.1em;
+            font-weight: bold;
+            border-radius: 8px;
             display: block;
             width: 100%;
             text-align: center;
             text-decoration: none;
+            transition: background-color 0.3s;
         }
         .add-to-cart:hover {
             background-color: #128C7E;
@@ -132,167 +99,25 @@
         <h1>Joni Panchal Jeans Store</h1>
     </div>
 
-    <div class="product-page-container">
+    <div class="product-container">
         
-        <div class="sidebar">
-            <h3>Select Style:</h3>
-            <div class="small-product-preview"><img src="1000049042.jpg" alt="Black Washed Front"></div>
-            <div class="small-product-preview"><img src="1000049043.jpg" alt="Black Washed Back"></div>
-            <div class="small-product-preview"><img src="1000049036.jpg" alt="Blue H&M Front"></div>
-            <div class="small-product-preview"><img src="1000049040.jpg" alt="Light Blue Mom Front"></div>
-            <div class="small-product-preview"><img src="1000049041.jpg" alt="Light Blue Mom Back"></div>
-            <div class="small-product-preview"><img src="1000049038.jpg" alt="Dark Blue Lee Cooper Front"></div>
-            <div class="small-product-preview"><img src="1000049039.jpg" alt="Dark Blue Lee Cooper Back"></div>
-            <div class="small-product-preview"><img src="1000049035.jpg" alt="Mid Blue Back"></div>
-            <div class="small-product-preview"><img src="1000049037.jpg" alt="H&M Tag Blue"></div>
-            <div class="small-product-preview"><img src="1000049044.jpg" alt="SLIQ Tag Black"></div>
+        <div class="product-image">
+            <img src="1000049040.jpg" alt="Light Blue Mom Jeans Front">
         </div>
 
-        <div class="main-display">
-            
-            <div class="main-product-slide">
-                <img src="1000049042.jpg" alt="Black Washed Jeans Front">
-                <div class="details-section">
-                    <h3>Product Details</h3>
-                    <ul class="details-list">
-                        <li>**Product details**</li>
-                        <li>**Fabric:** Denim</li>
-                        <li>**West size:** 33</li>
-                    </ul>
-                    <p class="price">Price: ₹200</p>
-                    <a href="https://wa.me/919588750916?text=I%20want%20to%20buy%20this%20Black%20Washed%20Jeans%20(Size%2033%2C%20%E2%82%B9200)." target="_blank" class="add-to-cart">ORDER ON WHATSAPP</a>
-                </div>
-            </div>
-
-            <div class="main-product-slide">
-                <img src="1000049043.jpg" alt="Black Washed Jeans Back">
-                <div class="details-section">
-                    <h3>Product Details</h3>
-                    <ul class="details-list">
-                        <li>**Product details**</li>
-                        <li>**Fabric:** Denim</li>
-                        <li>**West size:** 33</li>
-                    </ul>
-                    <p class="price">Price: ₹200</p>
-                    <a href="https://wa.me/919588750916?text=I%20want%20to%20buy%20this%20Black%20Washed%20Jeans%20(Size%2033%2C%20%E2%82%B9200)." target="_blank" class="add-to-cart">ORDER ON WHATSAPP</a>
-                </div>
-            </div>
-            
-            <div class="main-product-slide">
-                <img src="1000049036.jpg" alt="Blue H&M Jeans Front">
-                <div class="details-section">
-                    <h3>Product Details</h3>
-                    <ul class="details-list">
-                        <li>**Product details**</li>
-                        <li>**Fabric:** Denim</li>
-                        <li>**West size:** 33</li>
-                    </ul>
-                    <p class="price">Price: ₹200</p>
-                    <a href="https://wa.me/919588750916?text=I%20want%20to%20buy%20this%20Blue%20H&M%20Jeans%20(Size%2033%2C%20%E2%82%B9200)." target="_blank" class="add-to-cart">ORDER ON WHATSAPP</a>
-                </div>
-            </div>
-
-            <div class="main-product-slide">
-                <img src="1000049040.jpg" alt="Light Blue Mom Jeans Front">
-                <div class="details-section">
-                    <h3>Product Details</h3>
-                    <ul class="details-list">
-                        <li>**Product details**</li>
-                        <li>**Fabric:** Denim</li>
-                        <li>**West size:** 28</li>
-                    </ul>
-                    <p class="price">Price: ₹200</p>
-                    <a href="https://wa.me/919588750916?text=I%20want%20to%20buy%20this%20Light%20Blue%20Mom%20Jeans%20(Size%2028%2C%20%E2%82%B9200)." target="_blank" class="add-to-cart">ORDER ON WHATSAPP</a>
-                </div>
-            </div>
-            
-            <div class="main-product-slide">
-                <img src="1000049041.jpg" alt="Light Blue Mom Jeans Back">
-                <div class="details-section">
-                    <h3>Product Details</h3>
-                    <ul class="details-list">
-                        <li>**Product details**</li>
-                        <li>**Fabric:** Denim</li>
-                        <li>**West size:** 28</li>
-                    </ul>
-                    <p class="price">Price: ₹200</p>
-                    <a href="https://wa.me/919588750916?text=I%20want%20to%20buy%20this%20Light%20Blue%20Mom%20Jeans%20(Size%2028%2C%20%E2%82%B9200)." target="_blank" class="add-to-cart">ORDER ON WHATSAPP</a>
-                </div>
-            </div>
-            
-            <div class="main-product-slide">
-                <img src="1000049038.jpg" alt="Dark Blue Lee Cooper Jeans Front">
-                <div class="details-section">
-                    <h3>Product Details</h3>
-                    <ul class="details-list">
-                        <li>**Product details**</li>
-                        <li>**Fabric:** Denim</li>
-                        <li>**West size:** 30</li>
-                    </ul>
-                    <p class="price">Price: ₹200</p>
-                    <a href="https://wa.me/919588750916?text=I%20want%20to%20buy%20this%20Dark%20Blue%20Lee%20Cooper%20Jeans%20(Size%2030%2C%20%E2%82%B9200)." target="_blank" class="add-to-cart">ORDER ON WHATSAPP</a>
-                </div>
-            </div>
-            
-            <div class="main-product-slide">
-                <img src="1000049039.jpg" alt="Dark Blue Lee Cooper Jeans Back">
-                <div class="details-section">
-                    <h3>Product Details</h3>
-                    <ul class="details-list">
-                        <li>**Product details**</li>
-                        <li>**Fabric:** Denim</li>
-                        <li>**West size:** 30</li>
-                    </ul>
-                    <p class="price">Price: ₹200</p>
-                    <a href="https://wa.me/919588750916?text=I%20want%20to%20buy%20this%20Dark%20Blue%20Lee%20Cooper%20Jeans%20(Size%2030%2C%20%E2%82%B9200)." target="_blank" class="add-to-cart">ORDER ON WHATSAPP</a>
-                </div>
-            </div>
-
-            <div class="main-product-slide">
-                <img src="1000049035.jpg" alt="Mid Blue Jeans Back">
-                <div class="details-section">
-                    <h3>Product Details</h3>
-                    <ul class="details-list">
-                        <li>**Product details**</li>
-                        <li>**Fabric:** Denim</li>
-                        <li>**West size:** 32</li>
-                    </ul>
-                    <p class="price">Price: ₹200</p>
-                    <a href="https://wa.me/919588750916?text=I%20want%20to%20buy%20this%20Mid%20Blue%20Jeans%20(Size%2032%2C%20%E2%82%B9200)." target="_blank" class="add-to-cart">ORDER ON WHATSAPP</a>
-                </div>
-            </div>
-
-            <div class="main-product-slide">
-                <img src="1000049037.jpg" alt="H&M Tag Jeans">
-                <div class="details-section">
-                    <h3>Product Details</h3>
-                    <ul class="details-list">
-                        <li>**Product details**</li>
-                        <li>**Fabric:** Denim</li>
-                        <li>**West size:** 32</li>
-                    </ul>
-                    <p class="price">Price: ₹200</p>
-                    <a href="https://wa.me/919588750916?text=I%20want%20to%20buy%20this%20H&M%20Tag%20Jeans%20(Size%2032%2C%20%E2%82%B9200)." target="_blank" class="add-to-cart">ORDER ON WHATSAPP</a>
-                </div>
-            </div>
-
-            <div class="main-product-slide">
-                <img src="1000049044.jpg" alt="SLIQ Tag Black Jeans">
-                <div class="details-section">
-                    <h3>Product Details</h3>
-                    <ul class="details-list">
-                        <li>**Product details**</li>
-                        <li>**Fabric:** Denim</li>
-                        <li>**West size:** 32</li>
-                    </ul>
-                    <p class="price">Price: ₹200</p>
-                    <a href="https://wa.me/919588750916?text=I%20want%20to%20buy%20this%20SLIQ%20Tag%20Jeans%20(Size%2032%2C%20%E2%82%B9200)." target="_blank" class="add-to-cart">ORDER ON WHATSAPP</a>
-                </div>
-            </div>
-            
+        <div class="details-section">
+            <h3>Light Blue Mom Jeans (Used)</h3>
+            <ul class="details-list">
+                <li><strong>Product Name:</strong> Light Blue Mom Jeans</li>
+                <li><strong>Fabric:</strong> Denim</li>
+                <li><strong>West size:</strong> 28</li>
+            </ul>
+            <p class="price">Price: ₹200</p>
+            <a href="https://wa.me/919588750916?text=I%20want%20to%20buy%20this%20Light%20Blue%20Mom%20Jeans%20(Size%2028%2C%20%E2%82%B9200)." target="_blank" class="add-to-cart">ORDER ON WHATSAPP</a>
         </div>
         
     </div>
     
 </body>
 </html>
+
