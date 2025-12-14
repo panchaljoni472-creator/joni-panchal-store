@@ -33,13 +33,20 @@
             border-radius: 8px;
         }
         
-        .product-image img {
-            /* फ़ाइल नाम 1000049069.jpeg */
+        /* Image Gallery for Multiple Photos */
+        .image-gallery {
+            display: flex;
+            flex-direction: column; 
+            gap: 15px; 
+            margin-bottom: 20px;
+        }
+
+        .image-gallery img {
             max-width: 100%;
             height: auto;
-            max-height: 600px;
+            max-height: 500px; /* एक साथ दो इमेज दिखेंगी */
             display: block;
-            margin: 0 auto 20px;
+            margin: 0 auto;
             border: 1px solid #ddd;
             border-radius: 4px;
         }
@@ -107,8 +114,9 @@
 
     <div class="product-container">
         
-        <div class="product-image">
-            <img src="1000049069.jpeg" alt="Black Straight Fit Jeans Back Side">
+        <div class="image-gallery">
+            <img src="1000049070.jpg" alt="Black Straight Fit Jeans Front Side">
+            <img src="1000049069.jpg" alt="Black Straight Fit Jeans Back Side">
         </div>
 
         <div class="details-section">
