@@ -1,36 +1,25 @@
-
 <!DOCTYPE html>
 <html lang="hi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joni Panchal Store - New Collection</title>
+    <title>Joni Panchal Store - Collection</title>
     <style>
-        body { font-family: 'Poppins', sans-serif; margin: 0; padding: 0; background-color: #f8f9fa; color: #333; }
-        .header { background: #000; color: #fff; text-align: center; padding: 40px 20px; }
-        .header h1 { margin: 0; font-size: 2.5rem; letter-spacing: 3px; }
-        
-        /* Grid System */
+        body { font-family: 'Poppins', sans-serif; margin: 0; padding: 0; background-color: #f8f9fa; }
+        .header { background: #000; color: #fff; text-align: center; padding: 30px; }
         .product-grid { 
             display: grid; 
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-            gap: 25px; padding: 30px; max-width: 1200px; margin: 0 auto; 
+            gap: 20px; padding: 20px; max-width: 1000px; margin: 0 auto; 
         }
-
-        .card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: 0.3s; }
-        .card:hover { transform: translateY(-5px); }
-        
-        .img-container { width: 100%; height: 350px; background: #eee; overflow: hidden; }
-        .img-container img { width: 100%; height: 100%; object-fit: cover; }
-
-        .info { padding: 20px; text-align: center; }
-        .info h3 { margin: 10px 0; font-size: 1.2rem; color: #222; }
-        .price { font-size: 1.5rem; font-weight: bold; color: #e67e22; margin: 10px 0; }
-        .size-tag { background: #eee; padding: 4px 12px; border-radius: 20px; font-size: 0.9rem; }
-
+        .card { background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1); text-align: center; }
+        .img-box { width: 100%; height: 350px; background: #eee; }
+        .img-box img { width: 100%; height: 100%; object-fit: cover; }
+        .info { padding: 15px; }
+        .price { font-size: 1.4rem; color: #e67e22; font-weight: bold; }
         .order-btn { 
             display: block; background: #25d366; color: white; text-decoration: none; 
-            padding: 12px; border-radius: 8px; font-weight: bold; margin-top: 15px; 
+            padding: 10px; border-radius: 5px; margin-top: 10px; font-weight: bold; 
         }
     </style>
 </head>
@@ -38,20 +27,29 @@
 
     <div class="header">
         <h1>JONI PANCHAL STORE</h1>
-        <p>Premium Quality Denims</p>
     </div>
 
     <div class="product-grid">
         
         <div class="card">
-            <div class="img-container">
+            <div class="img-box">
                 <img src="1000049070.jpg" alt="Black Denim">
             </div>
             <div class="info">
                 <h3>Black Classic Denim</h3>
-                <span class="size-tag">Size: 30</span>
                 <div class="price">₹999</div>
-                <a href="https://wa.me/919588750916?text=Hi, I want to buy Black Classic Denim" class="order-btn">WhatsApp Order</a>
+                <a href="https://wa.me/919588750916?text=Hi, I want to buy Black Denim" class="order-btn">WhatsApp Order</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="img-box">
+                <img src="Pent2.jpg" alt="Light Blue Jeans">
+            </div>
+            <div class="info">
+                <h3>Light Blue Jeans</h3>
+                <div class="price">₹1099</div>
+                <a href="https://wa.me/919588750916?text=Hi, I want to buy Light Blue Jeans" class="order-btn">WhatsApp Order</a>
             </div>
         </div>
 
@@ -59,3 +57,4 @@
 
 </body>
 </html>
+
