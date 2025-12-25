@@ -3,57 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joni Panchal Store - Collection</title>
+    <title>Jen's Pants Hub</title>
     <style>
-        body { font-family: 'Poppins', sans-serif; margin: 0; padding: 0; background-color: #f8f9fa; }
-        .header { background: #000; color: #fff; text-align: center; padding: 30px; }
-        .product-grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-            gap: 20px; padding: 20px; max-width: 1000px; margin: 0 auto; 
+        body { font-family: sans-serif; margin: 0; padding: 0; background-color: #f8f8f8; }
+        header { background: #000; color: #fff; padding: 20px; text-align: center; }
+        h1 { margin: 0; font-size: 24px; letter-spacing: 2px; }
+
+        .container { width: 98%; margin: auto; padding: 10px 0; }
+        
+        /* Grid setup: Mobile par 2 images (1fr 1fr) */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); 
+            gap: 10px;
         }
-        .card { background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1); text-align: center; }
-        .img-box { width: 100%; height: 350px; background: #eee; }
-        .img-box img { width: 100%; height: 100%; object-fit: cover; }
-        .info { padding: 15px; }
-        .price { font-size: 1.4rem; color: #e67e22; font-weight: bold; }
-        .order-btn { 
-            display: block; background: #25d366; color: white; text-decoration: none; 
-            padding: 10px; border-radius: 5px; margin-top: 10px; font-weight: bold; 
+
+        /* Badi screen (Laptop/Tablet) ke liye settings */
+        @media (min-width: 768px) {
+            .gallery { grid-template-columns: repeat(4, 1fr); gap: 20px; }
         }
+
+        .card {
+            background: #fff;
+            padding: 5px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            border-radius: 3px;
+            display: block;
+        }
+
+        .whatsapp-btn {
+            display: block;
+            background: #25D366;
+            color: white;
+            text-decoration: none;
+            padding: 8px 5px;
+            margin-top: 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 13px;
+        }
+
+        footer { text-align: center; padding: 20px; color: #888; font-size: 12px; }
     </style>
 </head>
 <body>
 
-    <div class="header">
-        <h1>JONI PANCHAL STORE</h1>
-    </div>
+<header>
+    <h1>JEN'S PANTS HUB</h1>
+</header>
 
-    <div class="product-grid">
-        
+<div class="container">
+    <div class="gallery">
+
         <div class="card">
-            <div class="img-box">
-                <img src="1000049070.jpg" alt="Black Denim">
-            </div>
-            <div class="info">
-                <h3>Black Classic Denim</h3>
-                <div class="price">₹999</div>
-                <a href="https://wa.me/919588750916?text=Hi, I want to buy Black Denim" class="order-btn">WhatsApp Order</a>
-            </div>
+            <img src="https://via.placeholder.com/400x600?text=Pant+Photo+1" alt="Pant">
+            <a href="https://wa.me/919999999999?text=Mujhe ye pant chahiye" class="whatsapp-btn" target="_blank">Order on WhatsApp</a>
         </div>
 
         <div class="card">
-            <div class="img-box">
-                <img src="Pent2.jpg" alt="Light Blue Jeans">
-            </div>
-            <div class="info">
-                <h3>Light Blue Jeans</h3>
-                <div class="price">₹1099</div>
-                <a href="https://wa.me/919588750916?text=Hi, I want to buy Light Blue Jeans" class="order-btn">WhatsApp Order</a>
-            </div>
+            <img src="https://via.placeholder.com/400x600?text=Pant+Photo+2" alt="Pant">
+            <a href="https://wa.me/919999999999?text=Mujhe ye pant chahiye" class="whatsapp-btn" target="_blank">Order on WhatsApp</a>
         </div>
 
-    </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/400x600?text=Pant+Photo+3" alt="Pant">
+            <a href="https://wa.me/919999999999?text=Mujhe ye pant chahiye" class="whatsapp-btn" target="_blank">Order on WhatsApp</a>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/400x600?text=Pant+Photo+4" alt="Pant">
+            <a href="https://wa.me/919999999999?text=Mujhe ye pant chahiye" class="whatsapp-btn" target="_blank">Order on WhatsApp</a>
+        </div>
+
+        </div>
+</div>
+
+<footer>
+    &copy; 2025 Jen's Pants Hub
+</footer>
 
 </body>
 </html>
